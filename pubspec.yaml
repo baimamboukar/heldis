@@ -33,6 +33,7 @@ dependencies:
   firebase_core: ^1.11.0
   flutter:
     sdk: flutter
+  flutter_local_notifications: ^9.2.0
   google_fonts: ^2.2.0
   supercharged: ^2.1.1
 
