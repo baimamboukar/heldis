@@ -13,7 +13,13 @@ class Home extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: const <Widget>[],
+          children: <Widget>[
+            SizedBox(
+                height: 200,
+                child: ListView.builder(itemBuilder: (context, index) {
+                  return Container();
+                })),
+          ],
         ),
       ),
     );
