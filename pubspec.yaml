@@ -21,6 +21,7 @@ dependencies:
   flutter_local_notifications: ^9.2.0
   flutter_riverpod: ^1.0.3
   google_fonts: ^2.2.0
+  hooks_riverpod: ^1.0.3
   ionicons: ^0.1.2
   supercharged: ^2.1.1
 
