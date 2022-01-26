@@ -14,8 +14,9 @@ class Heldis extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-        routeInformationParser: routeInformationParser,
-        routerDelegate: routerDelegate);
+    return const MaterialApp(
+      title: "heldis",
+      home: Home(),
+    );
   }
 }
