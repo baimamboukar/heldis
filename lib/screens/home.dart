@@ -19,6 +19,7 @@ class Home extends StatelessWidget {
                 child: ListView.builder(itemBuilder: (context, index) {
                   return Container(
                     decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(28.0),
                       gradient: LinearGradient(colors: [
                         Colors.orange,
                         Colors.orange.withOpacity(0.6),
