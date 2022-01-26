@@ -19,6 +19,7 @@ dependencies:
     sdk: flutter
   flutter_local_notifications: ^9.2.0
   google_fonts: ^2.2.0
+  ionicons: ^0.1.2
   supercharged: ^2.1.1
 
 dev_dependencies:
