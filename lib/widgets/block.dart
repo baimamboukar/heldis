@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
 
 class Block extends StatelessWidget {
   final Icon icon;
@@ -24,8 +25,16 @@ class Block extends StatelessWidget {
               child: icon,
             ),
             Align(
-              alignment: Alignment.topLeft,
-              child: icon,
+              alignment: Alignment.topCenter,
+              child: Text(title),
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: Text(desc),
+            ),
+            const Align(
+              alignment: Alignment.bottomRight,
+              child: Icon(Ionicons.navigate),
             )
           ],
         ),
