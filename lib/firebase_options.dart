@@ -61,7 +61,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '754415622536',
     projectId: 'heldis',
     storageBucket: 'heldis.appspot.com',
-    iosClientId: '754415622536-ecg37l85abdco8s93svupi5pgvuggi95.apps.googleusercontent.com',
+    iosClientId:
+        '754415622536-ecg37l85abdco8s93svupi5pgvuggi95.apps.googleusercontent.com',
     iosBundleId: 'app.heldis.com',
   );
 }
