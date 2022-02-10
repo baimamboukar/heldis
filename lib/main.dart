@@ -18,6 +18,7 @@ class Heldis extends StatelessWidget {
     return const MaterialApp(
       title: "heldis",
       home: Home(),
+      color: Color.fromARGB(255, 46, 76, 245),
     );
   }
 }
