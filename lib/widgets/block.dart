@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ionicons/ionicons.dart';
 
 class Block extends StatelessWidget {
   final Icon icon;
@@ -16,27 +15,41 @@ class Block extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: Container(
-        child: Stack(
-          children: [
-            Align(
-              alignment: Alignment.topLeft,
-              child: icon,
+    return Padding(
+      padding: const EdgeInsets.all(18.0),
+      child: SizedBox(
+        height: 170.0,
+        child: Card(
+          child: Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Stack(
+              children: [
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: icon,
+                ),
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: Text(
+                    title,
+                    style: const TextStyle(
+                      color: Colors.purple,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(desc),
+                ),
+                const Align(
+                  alignment: Alignment.bottomRight,
+                  child: Icon(Icons.arrow_forward_ios),
+                )
+              ],
             ),
-            Align(
-              alignment: Alignment.topCenter,
-              child: Text(title),
-            ),
-            Align(
-              alignment: Alignment.center,
-              child: Text(desc),
-            ),
-            const Align(
-              alignment: Alignment.bottomRight,
-              child: Icon(Ionicons.navigate),
-            )
-          ],
+          ),
         ),
       ),
     );
