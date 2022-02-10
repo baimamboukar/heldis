@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:heldis/widgets/block.dart';
 
@@ -10,6 +11,16 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Heldis"),
         leading: const Icon(Icons.analytics),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.more_vert),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
