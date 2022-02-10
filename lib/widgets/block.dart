@@ -16,39 +16,40 @@ class Block extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(18.0),
-      child: SizedBox(
-        height: 170.0,
-        child: Card(
-          child: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Stack(
-              children: [
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: icon,
-                ),
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: Text(
-                    title,
-                    style: const TextStyle(
-                      color: Colors.purple,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20.0,
-                    ),
+      padding: const EdgeInsets.fromLTRB(10, 22, 10, 0),
+      child: Container(
+        height: 150.0,
+        decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 228, 225, 225),
+            borderRadius: BorderRadius.circular(12.0)),
+        child: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: Stack(
+            children: [
+              Align(
+                alignment: Alignment.topLeft,
+                child: icon,
+              ),
+              Align(
+                alignment: Alignment.topCenter,
+                child: Text(
+                  title,
+                  style: const TextStyle(
+                    color: Colors.purple,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0,
                   ),
                 ),
-                Align(
-                  alignment: Alignment.center,
-                  child: Text(desc),
-                ),
-                const Align(
-                  alignment: Alignment.bottomRight,
-                  child: Icon(Icons.arrow_forward_ios),
-                )
-              ],
-            ),
+              ),
+              Align(
+                alignment: Alignment.center,
+                child: Text(desc),
+              ),
+              const Align(
+                alignment: Alignment.bottomRight,
+                child: Icon(Icons.arrow_forward_ios),
+              )
+            ],
           ),
         ),
       ),
