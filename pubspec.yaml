@@ -14,7 +14,6 @@ dependencies:
   auto_route: ^3.2.2
   cloud_firestore: ^3.1.6
   cupertino_icons: ^1.0.2
-  eva_icons_flutter: ^3.0.2
   firebase_core: ^1.11.0
   flutter:
     sdk: flutter
@@ -22,7 +21,7 @@ dependencies:
   flutter_riverpod: ^1.0.3
   google_fonts: ^2.2.0
   hooks_riverpod: ^1.0.3
-  ionicons: ^0.1.2
+  line_icons: ^2.0.1
   qr: ^3.0.0
   supercharged: ^2.1.1
 
