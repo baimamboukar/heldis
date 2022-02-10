@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:heldis/utils/utils.dart';
 
 class Block extends StatelessWidget {
   final Icon icon;
@@ -20,8 +21,7 @@ class Block extends StatelessWidget {
       child: Container(
         height: 150.0,
         decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 228, 225, 225),
-            borderRadius: BorderRadius.circular(12.0)),
+            color: Colors.white70, borderRadius: BorderRadius.circular(12.0)),
         child: Padding(
           padding: const EdgeInsets.all(18.0),
           child: Stack(
@@ -32,14 +32,7 @@ class Block extends StatelessWidget {
               ),
               Align(
                 alignment: Alignment.topCenter,
-                child: Text(
-                  title,
-                  style: const TextStyle(
-                    color: Colors.purple,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20.0,
-                  ),
-                ),
+                child: Text(title, style: Styles.header()),
               ),
               Align(
                 alignment: Alignment.center,
