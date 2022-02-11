@@ -54,6 +54,6 @@ List<DrawerItem> items = const [
   DrawerItem(
     icon: Icon(LineIcons.stop),
     label: "Indiscipline",
-    destination: FlutterLogo(),
+    destination: Indiscipline.routeName,
   ),
 ];
