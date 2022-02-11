@@ -12,11 +12,8 @@ class StudentTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: isPresent
-            ? Palette.success.withOpacity(0.2)
-            : Palette.error.withOpacity(0.2),
-      ),
-      height: 60.0,
+          color: isPresent ? const Color(0xFFE4FFE7) : const Color(0xFFFFEBEB)),
+      height: 72.0,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
@@ -45,9 +42,11 @@ class StudentTile extends StatelessWidget {
                   width: 18.0,
                 ),
                 CircleAvatar(
-                  backgroundColor: isPresent ? Palette.success : Colors.grey,
+                  backgroundColor: isPresent
+                      ? const Color(0xFF01CF3B)
+                      : const Color(0xFFBDC1BE),
                   child: Icon(
-                    LineIcons.checkCircleAlt,
+                    Icons.check,
                     size: 25.0,
                     color: Palette.light,
                   ),
