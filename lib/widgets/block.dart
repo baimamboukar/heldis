@@ -21,7 +21,8 @@ class Block extends StatelessWidget {
       child: Container(
         height: 150.0,
         decoration: BoxDecoration(
-            color: Colors.white70, borderRadius: BorderRadius.circular(12.0)),
+            color: Palette.secondary,
+            borderRadius: BorderRadius.circular(12.0)),
         child: Padding(
           padding: const EdgeInsets.all(18.0),
           child: Stack(
