@@ -110,9 +110,10 @@ class Appel extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20.0),
-              for (int i = 0; i <= 10; i++)
+              for (String student in names)
                 StudentTile(
-                    names: "Samuel Mbas", isPresent: i % 2 == 0 ? false : true),
+                    names: student,
+                    isPresent: names.indexOf(student) % 2 == 0 ? false : true),
               Button(
                   text: "Enregistrer",
                   callback: () {},
