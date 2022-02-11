@@ -34,7 +34,7 @@ List<DrawerItem> items = const [
   DrawerItem(
     icon: Icon(LineIcons.user),
     label: "Home",
-    destination: FlutterLogo(),
+    destination: '/parent-home',
   ),
   DrawerItem(
     icon: Icon(LineIcons.qrcode),
