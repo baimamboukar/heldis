@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:heldis/screens/screens.dart';
 import 'package:heldis/utils/utils.dart';
 import 'package:heldis/widgets/drawer_item.dart';
 import 'package:line_icons/line_icons.dart';
@@ -43,7 +44,7 @@ List<DrawerItem> items = const [
   DrawerItem(
     icon: Icon(LineIcons.listOl),
     label: "Appel",
-    destination: FlutterLogo(),
+    destination: Appel.routeName,
   ),
   DrawerItem(
     icon: Icon(LineIcons.signature),
