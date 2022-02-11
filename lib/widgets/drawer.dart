@@ -56,4 +56,9 @@ List<DrawerItem> items = const [
     label: "Indiscipline",
     destination: Indiscipline.routeName,
   ),
+  DrawerItem(
+    icon: Icon(LineIcons.home),
+    label: "Acceuil",
+    destination: Welcome.routeName,
+  ),
 ];
