@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heldis/utils/utils.dart';
+import 'package:line_icons/line_icons.dart';
 
 class Block extends StatelessWidget {
   final Icon icon;
@@ -21,6 +22,7 @@ class Block extends StatelessWidget {
       child: Container(
         height: 150.0,
         decoration: BoxDecoration(
+            border: Border.all(color: Palette.primary, width: 1.0),
             color: Palette.secondary,
             borderRadius: BorderRadius.circular(12.0)),
         child: Padding(
@@ -41,7 +43,9 @@ class Block extends StatelessWidget {
               ),
               const Align(
                 alignment: Alignment.bottomRight,
-                child: Icon(Icons.arrow_forward_ios),
+                child: CircleAvatar(
+                  child: Icon(LineIcons.arrowRight),
+                ),
               )
             ],
           ),
