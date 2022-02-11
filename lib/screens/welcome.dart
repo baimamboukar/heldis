@@ -15,6 +15,11 @@ class Welcome extends StatelessWidget {
           CircleAvatar(
             radius: 68.0,
             backgroundColor: Palette.success,
+            child: Text(
+              "H",
+              style: Styles.designText(
+                  color: Palette.primary, size: 40, bold: true),
+            ),
           )
         ],
       ),
