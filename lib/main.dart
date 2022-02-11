@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:heldis/firebase_options.dart';
 import 'package:heldis/screens/screens.dart';
+import 'package:heldis/screens/student_details.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -58,6 +59,8 @@ class Heldis extends StatelessWidget {
                     return const Login();
                   case ParentHome.routeName:
                     return const ParentHome();
+                  case StudentDetails.routeName:
+                    return const StudentDetails();
                   default:
                     return const Home();
                 }
