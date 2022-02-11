@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:heldis/utils/utils.dart';
-import 'package:heldis/widgets/block.dart';
 import 'package:heldis/widgets/widgets.dart';
 import 'package:line_icons/line_icons.dart';
 
@@ -9,6 +7,7 @@ GlobalKey key = GlobalKey<ScaffoldState>();
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
+  static const routeName = '/home';
 
   @override
   Widget build(BuildContext context) {
