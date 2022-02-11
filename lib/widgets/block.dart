@@ -18,36 +18,37 @@ class Block extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(10, 22, 10, 0),
-      child: Container(
-        height: 150.0,
-        decoration: BoxDecoration(
-            border: Border.all(color: Palette.primary, width: 1.0),
-            color: Palette.secondary,
-            borderRadius: BorderRadius.circular(12.0)),
-        child: Padding(
-          padding: const EdgeInsets.all(18.0),
-          child: Stack(
-            children: [
-              Align(
-                alignment: Alignment.topLeft,
-                child: icon,
-              ),
-              Align(
-                alignment: Alignment.topCenter,
-                child: Text(title, style: Styles.header()),
-              ),
-              Align(
-                alignment: Alignment.center,
-                child: Text(desc),
-              ),
-              const Align(
-                alignment: Alignment.bottomRight,
-                child: CircleAvatar(
-                  child: Icon(LineIcons.arrowRight),
+      padding: const EdgeInsets.all(4.0) +
+          const EdgeInsets.only(left: 10, right: 10),
+      child: Card(
+        elevation: 5.0,
+        child: Container(
+          height: 150.0,
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12.0)),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Stack(
+              children: [
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: icon,
                 ),
-              )
-            ],
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: Text(title, style: Styles.header()),
+                ),
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(desc),
+                ),
+                const Align(
+                  alignment: Alignment.bottomRight,
+                  child: CircleAvatar(
+                    child: Icon(LineIcons.arrowRight),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
