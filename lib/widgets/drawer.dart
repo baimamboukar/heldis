@@ -46,7 +46,7 @@ List<DrawerItem> items = const [
     destination: FlutterLogo(),
   ),
   DrawerItem(
-    icon: Icon(LineIcons.sign),
+    icon: Icon(LineIcons.signature),
     label: "Login",
     destination: FlutterLogo(),
   ),
