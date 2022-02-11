@@ -49,7 +49,7 @@ List<DrawerItem> items = const [
   DrawerItem(
     icon: Icon(LineIcons.signature),
     label: "Login",
-    destination: FlutterLogo(),
+    destination: Login.routeName,
   ),
   DrawerItem(
     icon: Icon(LineIcons.stop),
