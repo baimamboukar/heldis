@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Palette {
-  static Color primary = Colors.indigo;
+  static Color primary = const Color(0xFF0E0062);
   static Color secondary = Colors.grey;
   static Color accent = Colors.pink;
   static Color error = Colors.red;
