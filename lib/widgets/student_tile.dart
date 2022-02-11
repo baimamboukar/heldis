@@ -22,30 +22,35 @@ class StudentTile extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Icon(
-              Icons.person,
-              size: 25.0,
-            ),
-            Text(
-              names,
-              style: Styles.designText(
-                  color: Palette.dark, size: 18.0, bold: true),
+            Row(
+              children: [
+                const Icon(
+                  LineIcons.user,
+                  size: 25.0,
+                ),
+                Text(
+                  names,
+                  style: Styles.designText(
+                      color: Palette.dark, size: 18.0, bold: true),
+                ),
+              ],
             ),
             Row(
               children: [
+                const Text("8"),
                 const SizedBox(
                   width: 18.0,
                 ),
-                const Text("8"),
-                Expanded(
+                CircleAvatar(
+                  backgroundColor: isPresent ? Palette.success : Colors.grey,
                   child: Icon(
                     LineIcons.checkCircleAlt,
                     size: 25.0,
-                    color: isPresent ? Palette.success : Palette.secondary,
+                    color: Palette.light,
                   ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),
