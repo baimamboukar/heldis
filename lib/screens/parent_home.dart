@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heldis/utils/utils.dart';
+import 'package:heldis/widgets/widgets.dart';
 
 class ParentHome extends StatelessWidget {
   const ParentHome({Key? key}) : super(key: key);
@@ -30,6 +31,23 @@ class ParentHome extends StatelessWidget {
                   style: Styles.designText(
                       color: Palette.dark, size: 18, bold: false),
                 ),
+                const SizedBox(height: 30),
+                const ChildTile(
+                  name: "Samuel Mbas",
+                  school: "Lycee Leclerc",
+                ),
+                const ChildTile(
+                  name: "Ewondo Marcel",
+                  school: "Lycee de Ngoa-Ekele",
+                ),
+                const ChildTile(
+                  name: "Amadou Toure",
+                  school: "Lycee de Bepanda",
+                ),
+                const ChildTile(
+                  name: "Baimam Jean",
+                  school: "ICT",
+                )
               ],
             ),
           ),
