@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:heldis/utils/utils.dart';
 import 'package:heldis/widgets/labeltile.dart';
+import 'package:heldis/widgets/student_tile.dart';
 import 'package:line_icons/line_icons.dart';
 
 class Appel extends StatelessWidget {
@@ -107,6 +108,9 @@ class Appel extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20.0),
+              for (int i = 0; i <= 10; i++)
+                StudentTile(
+                    names: "Samuel Mbas", isPresent: i % 2 == 0 ? false : true)
             ],
           ),
         ),
