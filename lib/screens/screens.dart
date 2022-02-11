@@ -4,3 +4,4 @@ export 'scan.dart';
 export 'indiscipline.dart';
 export 'login.dart';
 export 'welcome.dart';
+export 'parent_home.dart';
