@@ -25,8 +25,11 @@ class StudentTile extends StatelessWidget {
             Row(
               children: [
                 const Icon(
-                  LineIcons.user,
-                  size: 25.0,
+                  LineIcons.userCircle,
+                  size: 35.0,
+                ),
+                const SizedBox(
+                  width: 8,
                 ),
                 Text(
                   names,
