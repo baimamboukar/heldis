@@ -6,7 +6,7 @@ class DrawerItem extends StatelessWidget {
   const DrawerItem({Key? key, this.icon, required this.label, this.destination})
       : super(key: key);
 
-  final Widget? destination;
+  final dynamic destination;
   final Widget? icon;
   final String label;
 
@@ -14,7 +14,7 @@ class DrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
         onTap: () {
-          Navigator.pushNamed(context, '/notes');
+          Navigator.pushNamed(context, destination);
         },
         leading: icon,
         title: Text(label,
