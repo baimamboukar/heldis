@@ -55,27 +55,29 @@ class Indiscipline extends StatelessWidget {
                   width: double.infinity,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: DropdownButton<String>(
-                      underline: const SizedBox.shrink(),
-                      value: "Bavardage en classe",
-                      items: <String>[
-                        "Bavardage en classe",
-                        "Escalade mur",
-                        "Indiscipline caracterisee",
-                        "Refus de balayage"
-                      ].map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(
-                            value,
-                            style: const TextStyle(color: Colors.black),
-                          ),
-                        );
-                      }).toList(),
-                      hint: const Text(
-                        "Choisir motif",
+                    child: Center(
+                      child: DropdownButton<String>(
+                        underline: const SizedBox.shrink(),
+                        value: "Bavardage en classe",
+                        items: <String>[
+                          "Bavardage en classe",
+                          "Escalade mur",
+                          "Indiscipline caracterisee",
+                          "Refus de balayage"
+                        ].map<DropdownMenuItem<String>>((String value) {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(
+                              value,
+                              style: const TextStyle(color: Colors.black),
+                            ),
+                          );
+                        }).toList(),
+                        hint: const Text(
+                          "Choisir motif",
+                        ),
+                        onChanged: (String? currentValue) {},
                       ),
-                      onChanged: (String? currentValue) {},
                     ),
                   ),
                 ),
@@ -97,9 +99,10 @@ class Indiscipline extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20.0),
-              for (int i = 0; i <= 10; i++)
+              for (String student in names)
                 StudentTile(
-                    names: "Samuel Mbas", isPresent: i % 2 == 0 ? false : true),
+                    names: student,
+                    isPresent: names.indexOf(student) % 2 == 0 ? false : true),
               Button(
                   text: "Enregistrer",
                   callback: () {},
