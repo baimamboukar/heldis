@@ -3,7 +3,7 @@ import 'package:heldis/utils/utils.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
-  static const routename = '/welcome';
+  static const routeName = '/welcome';
 
   @override
   Widget build(BuildContext context) {
