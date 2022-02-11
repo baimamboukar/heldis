@@ -13,7 +13,9 @@ class DrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-        onTap: () {},
+        onTap: () {
+          Navigator.pushNamed(context, '/notes');
+        },
         leading: icon,
         title: Text(label,
             style:
