@@ -52,6 +52,8 @@ class Heldis extends StatelessWidget {
                     return const Appel();
                   case Indiscipline.routeName:
                     return const Indiscipline();
+                  case Welcome.routeName:
+                    return const Welcome();
                   default:
                     return const Home();
                 }
