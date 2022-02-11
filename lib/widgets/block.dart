@@ -21,6 +21,7 @@ class Block extends StatelessWidget {
       padding: const EdgeInsets.all(4.0) +
           const EdgeInsets.only(left: 10, right: 10),
       child: Card(
+        color: const Color(0xFFEFEFEF),
         elevation: 5.0,
         child: Container(
           height: 150.0,
