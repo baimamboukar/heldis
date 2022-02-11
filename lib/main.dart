@@ -56,6 +56,8 @@ class Heldis extends StatelessWidget {
                     return const Welcome();
                   case Login.routeName:
                     return const Login();
+                  case ParentHome.routeName:
+                    return const ParentHome();
                   default:
                     return const Home();
                 }
