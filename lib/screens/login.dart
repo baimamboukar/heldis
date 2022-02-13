@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:heldis/utils/utils.dart';
 import 'package:heldis/widgets/button.dart';
 import 'package:heldis/widgets/input.dart';
+import 'package:heldis/widgets/widgets.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -20,17 +21,7 @@ class Login extends StatelessWidget {
             style: Styles.designText(size: 28, color: Palette.dark, bold: true),
           ),
           const SizedBox(height: 20),
-          Center(
-            child: CircleAvatar(
-              radius: 55.0,
-              backgroundColor: Palette.success.withOpacity(0.35),
-              child: Text(
-                "H",
-                style: Styles.designText(
-                    color: Palette.primary, size: 70, bold: true),
-              ),
-            ),
-          ),
+          const Center(child: Logo()),
           const SizedBox(height: 30),
           Text(
             "Connectez-vous",
