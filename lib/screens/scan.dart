@@ -25,7 +25,9 @@ class ScanView extends StatelessWidget {
             const SizedBox(
               height: 15.0,
             ),
-            LottieBuilder.asset("assets/animations/scan.json")
+            LottieBuilder.asset(
+              "assets/animations/scan.json",
+            )
           ],
         ),
       )),
