@@ -1,3 +1,4 @@
+import 'package:adaptive_dialog/adaptive_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:heldis/utils/utils.dart';
 
@@ -27,6 +28,10 @@ class ClassDetails extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        showTextInputDialog(
+            context: context, textFields: [const DialogTextField()]);
+      }),
     );
   }
 }
