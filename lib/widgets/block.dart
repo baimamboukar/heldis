@@ -3,7 +3,7 @@ import 'package:heldis/utils/utils.dart';
 import 'package:line_icons/line_icons.dart';
 
 class Block extends StatelessWidget {
-  final Icon icon;
+  final String icon;
   final String title;
   final String desc;
   final Widget nextScreen;
@@ -32,7 +32,11 @@ class Block extends StatelessWidget {
               children: [
                 Align(
                   alignment: Alignment.topLeft,
-                  child: Image.asset("assets/icons/devoir.png"),
+                  child: Image.asset(
+                    icon,
+                    height: 55.0,
+                    width: 55.0,
+                  ),
                 ),
                 Align(
                   alignment: Alignment.topCenter,
