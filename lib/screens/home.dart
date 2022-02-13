@@ -59,11 +59,16 @@ class Home extends StatelessWidget {
               icon: "assets/icons/grades.png",
               nextScreen: Home(),
             ),
-            const Block(
-              title: "Scanner une carte",
-              desc: "Scannez la carte d'un eleve pour l'identifier",
-              icon: "assets/icons/qrcode.png",
-              nextScreen: Home(),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/scan');
+              },
+              child: const Block(
+                title: "Scanner une carte",
+                desc: "Scannez la carte d'un eleve pour l'identifier",
+                icon: "assets/icons/qrcode.png",
+                nextScreen: Home(),
+              ),
             ),
             const SizedBox(
               height: 20.0,
