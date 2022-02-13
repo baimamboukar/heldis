@@ -61,4 +61,9 @@ List<DrawerItem> items = const [
     label: "Acceuil",
     destination: Welcome.routeName,
   ),
+  DrawerItem(
+    icon: Icon(LineIcons.phoneSquare),
+    label: "Phone Auth",
+    destination: PhoneAuth.routeName,
+  ),
 ];
