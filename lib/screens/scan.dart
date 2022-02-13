@@ -9,17 +9,28 @@ class ScanView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-          child: Column(
-        children: [
-          const SizedBox(
-            height: 30.0,
-          ),
-          Text(
-            "Veuillez scanner ce code QR",
-            style: Styles.designText(size: 20, color: Palette.dark, bold: true),
-          ),
-          Image.asset("assets/icons/qrcode.png")
-        ],
+          child: Padding(
+        padding: const EdgeInsets.all(14.0),
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 30.0,
+            ),
+            Text(
+              "Veuillez scanner ce code QR",
+              style:
+                  Styles.designText(size: 20, color: Palette.dark, bold: true),
+            ),
+            const SizedBox(
+              height: 15.0,
+            ),
+            Image.asset(
+              "assets/icons/qrcode.png",
+              height: 150.0,
+              width: 150.0,
+            )
+          ],
+        ),
       )),
     );
   }
