@@ -31,7 +31,7 @@ class SchoolHome extends StatelessWidget {
             itemBuilder: (BuildContext context, int index) {
               return GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, '/classe-details');
+                  Navigator.pushNamed(context, '/class-details');
                 },
                 child: const Card(
                   child: SizedBox(
