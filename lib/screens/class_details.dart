@@ -13,6 +13,7 @@ class ClassDetails extends StatelessWidget {
         elevation: 0.0,
       ),
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
             for (String student in names)
