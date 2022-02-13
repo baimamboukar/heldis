@@ -44,7 +44,10 @@ class Block extends StatelessWidget {
                 ),
                 Align(
                   alignment: Alignment.center,
-                  child: Text(desc),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 20.0),
+                    child: Text(desc),
+                  ),
                 ),
                 const Align(
                   alignment: Alignment.bottomRight,
