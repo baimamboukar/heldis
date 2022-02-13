@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:heldis/utils/utils.dart';
 import 'package:heldis/widgets/button.dart';
 import 'package:heldis/widgets/widgets.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
 
 class ValidateOTP extends StatelessWidget {
   const ValidateOTP({Key? key}) : super(key: key);
@@ -38,7 +39,15 @@ class ValidateOTP extends StatelessWidget {
               const SizedBox(
                 height: 20.0,
               ),
-              const Input(label: "No Telephone", hint: "Entrez votre numero"),
+              PinCodeTextField(
+                appContext: context,
+                pinTheme: PinTheme(shape: PinCodeFieldShape.box),
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                //  obscuringWidget: const Text("🚩"),
+                blinkWhenObscuring: true,
+                length: 4,
+                onChanged: (value) {},
+              ),
               const SizedBox(
                 height: 20.0,
               ),
