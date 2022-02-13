@@ -114,7 +114,7 @@ class StudentDetails extends StatelessWidget {
                 GestureDetector(
                   onTap: () => Navigator.pushNamed(context, '/presences'),
                   child: const Box(
-                      icon: "assets/icons/devoir.png", title: "Presences"),
+                      icon: "assets/icons/presence.png", title: "Presences"),
                 ),
                 const Box(
                     icon: "assets/icons/timetable.png",
@@ -142,7 +142,7 @@ class StudentDetails extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 Box(icon: "assets/icons/grades.png", title: "Notes"),
-                Box(icon: "assets/icons/devoir.png", title: "Profil"),
+                Box(icon: "assets/icons/user.png", title: "Profil"),
               ],
             ),
           )
