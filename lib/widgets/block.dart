@@ -32,7 +32,7 @@ class Block extends StatelessWidget {
               children: [
                 Align(
                   alignment: Alignment.topLeft,
-                  child: icon,
+                  child: Image.asset("assets/icons/devoir.png"),
                 ),
                 Align(
                   alignment: Alignment.topCenter,
