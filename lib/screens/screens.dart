@@ -9,3 +9,4 @@ export 'presences.dart';
 export 'phone_auth.dart';
 export 'validate_otp.dart';
 export 'school_home.dart';
+export 'class_details.dart';
