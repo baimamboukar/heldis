@@ -114,8 +114,7 @@ class StudentDetails extends StatelessWidget {
                 GestureDetector(
                   onTap: () => Navigator.pushNamed(context, '/presences'),
                   child: Box(
-                      icon: Icon(Icons.person,
-                          size: 45.0, color: Palette.success),
+                      icon: Image.asset("assets/icons/devoir.png"),
                       title: "Presences"),
                 ),
                 Box(
