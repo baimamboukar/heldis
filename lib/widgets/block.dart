@@ -28,26 +28,40 @@ class Block extends StatelessWidget {
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(12.0)),
           child: Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Stack(
+            child: Row(
               children: [
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: icon,
+                Image.asset(
+                  "assets/icons/indiscipline.png",
+                  height: 55.0,
+                  width: 55.0,
                 ),
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: Text(title, style: Styles.header()),
+                Stack(
+                  children: [
+                    // Align(
+                    //   alignment: Alignment.topLeft,
+                    //   child: icon,
+                    // ),
+                    Align(
+                      alignment: Alignment.topCenter,
+                      child: Text(title, style: Styles.header()),
+                    ),
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        desc,
+                        softWrap: true,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 3,
+                      ),
+                    ),
+                    const Align(
+                      alignment: Alignment.bottomRight,
+                      child: CircleAvatar(
+                        child: Icon(LineIcons.arrowRight),
+                      ),
+                    )
+                  ],
                 ),
-                Align(
-                  alignment: Alignment.center,
-                  child: Text(desc),
-                ),
-                const Align(
-                  alignment: Alignment.bottomRight,
-                  child: CircleAvatar(
-                    child: Icon(LineIcons.arrowRight),
-                  ),
-                )
               ],
             ),
           ),
