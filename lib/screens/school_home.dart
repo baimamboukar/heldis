@@ -29,12 +29,17 @@ class SchoolHome extends StatelessWidget {
           ListView.builder(
             itemCount: 10,
             itemBuilder: (BuildContext context, int index) {
-              return const Card(
-                child: SizedBox(
-                  height: 68.0,
-                  child: ListTile(
-                    title: Text("6eme A"),
-                    trailing: Icon(Icons.more_vert),
+              return GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/classe-details');
+                },
+                child: const Card(
+                  child: SizedBox(
+                    height: 68.0,
+                    child: ListTile(
+                      title: Text("6eme A"),
+                      trailing: Icon(Icons.more_vert),
+                    ),
                   ),
                 ),
               );
