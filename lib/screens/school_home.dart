@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:heldis/utils/utils.dart';
 
 class SchoolHome extends StatelessWidget {
   const SchoolHome({Key? key}) : super(key: key);
@@ -6,14 +7,62 @@ class SchoolHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Ekorezock"),
-        bottom: const TabBar(tabs: [
-          Text("Classes"),
-          Text("Enseignants"),
-          Text("Eleves"),
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          elevation: 0.0,
+          title: const Text("Ekorezock"),
+          bottom: TabBar(
+              indicatorPadding: const EdgeInsets.all(10.0),
+              indicatorColor: Palette.success,
+              enableFeedback: true,
+              physics: const BouncingScrollPhysics(),
+              tabs: const [
+                Text("Classes"),
+                Text("Enseignants"),
+                Text("Eleves"),
+              ]),
+        ),
+        body: TabBarView(children: [
+          ListView.builder(
+            itemCount: 10,
+            itemBuilder: (BuildContext context, int index) {
+              return const Card(
+                child: ListTile(
+                  title: Text("6eme A"),
+                  trailing: Icon(Icons.more_vert),
+                ),
+              );
+            },
+          ),
+          ListView.builder(
+            itemCount: 10,
+            itemBuilder: (BuildContext context, int index) {
+              return const Card(
+                child: ListTile(
+                  title: Text("6eme A"),
+                  trailing: Icon(Icons.more_vert),
+                ),
+              );
+            },
+          ),
+          ListView.builder(
+            itemCount: 10,
+            itemBuilder: (BuildContext context, int index) {
+              return const Card(
+                child: ListTile(
+                  title: Text("6eme A"),
+                  trailing: Icon(Icons.more_vert),
+                ),
+              );
+            },
+          )
         ]),
+        floatingActionButton: FloatingActionButton(
+          child: const Icon(Icons.add),
+          onPressed: () {},
+        ),
       ),
     );
   }
