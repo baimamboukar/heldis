@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heldis/utils/utils.dart';
+import 'package:lottie/lottie.dart';
 
 class ScanView extends StatelessWidget {
   const ScanView({Key? key}) : super(key: key);
@@ -24,11 +25,7 @@ class ScanView extends StatelessWidget {
             const SizedBox(
               height: 15.0,
             ),
-            Image.asset(
-              "assets/icons/qrcode.png",
-              height: 150.0,
-              width: 150.0,
-            )
+            LottieBuilder.asset("assets/animations/scan.json")
           ],
         ),
       )),
