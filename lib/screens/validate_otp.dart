@@ -23,7 +23,7 @@ class ValidateOTP extends StatelessWidget {
             Text(
               "Verification du numero de telephone",
               style: Styles.designText(
-                  size: 28, color: Colors.black45, bold: true),
+                  size: 20, color: Colors.black45, bold: true),
             ),
             const SizedBox(
               height: 12.0,
@@ -31,7 +31,7 @@ class ValidateOTP extends StatelessWidget {
             Text(
               "Veuillez entrer le code a quatre chiffres que nous vous avons envoyer par SMS",
               style:
-                  Styles.designText(size: 28, color: Palette.dark, bold: true),
+                  Styles.designText(size: 18, color: Palette.dark, bold: true),
             ),
             const SizedBox(
               height: 20.0,
