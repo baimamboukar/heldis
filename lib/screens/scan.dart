@@ -9,6 +9,10 @@ class ScanView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Scan"),
+        elevation: 0.0,
+      ),
       body: SingleChildScrollView(
           child: Padding(
         padding: const EdgeInsets.all(14.0),
@@ -19,8 +23,13 @@ class ScanView extends StatelessWidget {
             ),
             Text(
               "Veuillez scanner ce code QR",
+              style: Styles.designText(
+                  size: 20, color: Palette.primary, bold: true),
+            ),
+            Text(
+              "Positionnez la camera au niveau du code QR et scannez",
               style:
-                  Styles.designText(size: 20, color: Palette.dark, bold: true),
+                  Styles.designText(size: 16, color: Palette.dark, bold: true),
             ),
             const SizedBox(
               height: 15.0,
