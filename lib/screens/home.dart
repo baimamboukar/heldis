@@ -68,7 +68,7 @@ class Home extends StatelessWidget {
             const SizedBox(
               height: 20.0,
             ),
-            LottieBuilder.asset("assets/animations/star.json")
+            LottieBuilder.asset("assets/animations/loading.json")
           ],
         ),
       ),
