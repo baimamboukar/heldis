@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:heldis/utils/utils.dart';
 import 'package:heldis/widgets/widgets.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:lottie/lottie.dart';
 
 GlobalKey key = GlobalKey<ScaffoldState>();
 
@@ -66,7 +67,8 @@ class Home extends StatelessWidget {
             ),
             const SizedBox(
               height: 20.0,
-            )
+            ),
+            LottieBuilder.asset("assets/animations/star.json")
           ],
         ),
       ),
