@@ -7,6 +7,7 @@ import 'package:heldis/screens/screens.dart';
 import 'package:heldis/screens/student_details.dart';
 
 Future<void> main() async {
+  
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const ProviderScope(child: Heldis()));
