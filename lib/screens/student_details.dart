@@ -113,13 +113,11 @@ class StudentDetails extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () => Navigator.pushNamed(context, '/presences'),
-                  child: Box(
-                      icon: Image.asset("assets/icons/devoir.png"),
-                      title: "Presences"),
+                  child: const Box(
+                      icon: "assets/icons/devoir.png", title: "Presences"),
                 ),
-                Box(
-                    icon: Icon(Icons.calendar_today,
-                        size: 45.0, color: Palette.primary),
+                const Box(
+                    icon: "assets/icons/timetable.png",
                     title: "Emploi du temps"),
               ],
             ),
@@ -129,14 +127,10 @@ class StudentDetails extends StatelessWidget {
                 const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                const Box(
-                    icon: Icon(LineIcons.bookOpen,
-                        size: 45.0, color: Colors.cyan),
-                    title: "Devoir"),
+              children: const [
+                Box(icon: "assets/icons/devoir.png", title: "Devoir"),
                 Box(
-                    icon: Icon(Icons.stop_circle,
-                        size: 45.0, color: Palette.error),
+                    icon: "assets/icons/indiscipline.png",
                     title: "Indiscipline"),
               ],
             ),
@@ -146,13 +140,9 @@ class StudentDetails extends StatelessWidget {
                 const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Box(
-                    icon: Icon(Icons.notes, size: 45.0, color: Palette.primary),
-                    title: "Notes"),
-                Box(
-                    icon: Icon(LineIcons.user, size: 45.0, color: Palette.dark),
-                    title: "Profil"),
+              children: const [
+                Box(icon: "assets/icons/grades.png", title: "Notes"),
+                Box(icon: "assets/icons/devoir.png", title: "Profil"),
               ],
             ),
           )
