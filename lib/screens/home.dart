@@ -42,7 +42,7 @@ class Home extends StatelessWidget {
               title: "Faire l'appel",
               desc:
                   "Faites l'appel a la fin de chaque cour pour connaitre les eleves qui etaitent presents",
-              icon: "assets/icons/grades.png",
+              icon: "assets/icons/presence.png",
               nextScreen: Home(),
             ),
             const Block(
@@ -61,7 +61,7 @@ class Home extends StatelessWidget {
             const Block(
               title: "Scanner une carte",
               desc: "Scannez la carte d'un eleve pour l'identifier",
-              icon: "assets/icons/grades.png",
+              icon: "assets/icons/qrcode.png",
               nextScreen: Home(),
             ),
             const SizedBox(
