@@ -12,6 +12,9 @@ class Presences extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("Presences")),
       body: GroupedListView(
+          physics: const BouncingScrollPhysics(),
+          floatingHeader: true,
+          order: GroupedListOrder.DESC,
           groupSeparatorBuilder: (String group) => Stack(
                 clipBehavior: Clip.none,
                 alignment: Alignment.center,
