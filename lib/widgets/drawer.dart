@@ -66,4 +66,9 @@ List<DrawerItem> items = const [
     label: "Phone Auth",
     destination: PhoneAuth.routeName,
   ),
+  DrawerItem(
+    icon: Icon(LineIcons.school),
+    label: "School Home",
+    destination: SchoolHome.routeName,
+  ),
 ];
