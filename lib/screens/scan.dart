@@ -3,6 +3,7 @@ import 'package:heldis/utils/utils.dart';
 
 class ScanView extends StatelessWidget {
   const ScanView({Key? key}) : super(key: key);
+  static const String routeName = '/scan';
 
   @override
   Widget build(BuildContext context) {
