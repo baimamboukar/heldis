@@ -67,6 +67,8 @@ class Heldis extends StatelessWidget {
                     return const PhoneAuth();
                   case ValidateOTP.routeName:
                     return const ValidateOTP();
+                  case SchoolHome.routeName:
+                    return const SchoolHome();
 
                   default:
                     return const Home();
