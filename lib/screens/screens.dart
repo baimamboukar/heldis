@@ -7,3 +7,4 @@ export 'welcome.dart';
 export 'parent_home.dart';
 export 'presences.dart';
 export 'phone_auth.dart';
+export 'validate_otp.dart';
