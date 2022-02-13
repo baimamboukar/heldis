@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:heldis/utils/utils.dart';
 
 class Box extends StatelessWidget {
-  final Widget icon;
+  final String icon;
   final String title;
   const Box({Key? key, required this.icon, required this.title})
       : super(key: key);
@@ -19,17 +19,21 @@ class Box extends StatelessWidget {
             //border: Border.all(color: Palette.primary, width: 1.0),
             borderRadius: BorderRadius.circular(10.0)),
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              icon,
+              Image.asset(
+                icon,
+                height: 60.0,
+                width: 60.0,
+              ),
               const SizedBox(
-                height: 12.0,
+                height: 8.0,
               ),
               Text(
                 title,
                 style: Styles.designText(
-                    color: Palette.dark, size: 16.0, bold: false),
+                    color: Palette.dark, size: 18.0, bold: false),
               )
             ],
           ),
