@@ -1,3 +1,4 @@
+import 'package:adaptive_dialog/adaptive_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:heldis/utils/utils.dart';
 import 'package:heldis/widgets/input.dart';
@@ -78,16 +79,10 @@ class SchoolHome extends StatelessWidget {
         floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.add),
           onPressed: () {
-            showDialog(
-                useRootNavigator: false,
+            showTextInputDialog(
+                title: "Nom de la classe",
                 context: context,
-                builder: (context) {
-                  return const Card(
-                    child: Center(
-                      child: Input(label: "Nom de la classe", hint: "classe"),
-                    ),
-                  );
-                });
+                textFields: [const DialogTextField()]);
           },
         ),
       ),
