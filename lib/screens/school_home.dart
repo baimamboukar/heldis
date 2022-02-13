@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heldis/utils/utils.dart';
+import 'package:heldis/widgets/input.dart';
 
 class SchoolHome extends StatelessWidget {
   const SchoolHome({Key? key}) : super(key: key);
@@ -13,12 +14,12 @@ class SchoolHome extends StatelessWidget {
         appBar: AppBar(
           elevation: 0.0,
           title: const Text("Ekorezock"),
-          bottom: TabBar(
-              indicatorPadding: const EdgeInsets.all(10.0),
-              indicatorColor: Palette.success,
+          bottom: const TabBar(
               enableFeedback: true,
-              physics: const BouncingScrollPhysics(),
-              tabs: const [
+              labelPadding: EdgeInsets.all(8.0),
+              isScrollable: false,
+              physics: BouncingScrollPhysics(),
+              tabs: [
                 Text("Classes"),
                 Text("Enseignants"),
                 Text("Eleves"),
@@ -29,9 +30,12 @@ class SchoolHome extends StatelessWidget {
             itemCount: 10,
             itemBuilder: (BuildContext context, int index) {
               return const Card(
-                child: ListTile(
-                  title: Text("6eme A"),
-                  trailing: Icon(Icons.more_vert),
+                child: SizedBox(
+                  height: 68.0,
+                  child: ListTile(
+                    title: Text("6eme A"),
+                    trailing: Icon(Icons.more_vert),
+                  ),
                 ),
               );
             },
@@ -41,7 +45,8 @@ class SchoolHome extends StatelessWidget {
             itemBuilder: (BuildContext context, int index) {
               return const Card(
                 child: ListTile(
-                  title: Text("6eme A"),
+                  title: Text("M. EYEBE Marcelin"),
+                  subtitle: Text("Francais: Tle C, 1ere All"),
                   trailing: Icon(Icons.more_vert),
                 ),
               );
@@ -50,10 +55,16 @@ class SchoolHome extends StatelessWidget {
           ListView.builder(
             itemCount: 10,
             itemBuilder: (BuildContext context, int index) {
-              return const Card(
+              return Card(
                 child: ListTile(
-                  title: Text("6eme A"),
-                  trailing: Icon(Icons.more_vert),
+                  title: const Text("6eme A"),
+                  trailing: Container(
+                      child: const Center(
+                        child: Text("72"),
+                      ),
+                      height: 40.0,
+                      width: 40.0,
+                      color: const Color(0xFF21C507)),
                 ),
               );
             },
@@ -61,7 +72,18 @@ class SchoolHome extends StatelessWidget {
         ]),
         floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.add),
-          onPressed: () {},
+          onPressed: () {
+            showDialog(
+                useRootNavigator: false,
+                context: context,
+                builder: (context) {
+                  return const Card(
+                    child: Center(
+                      child: Input(label: "Nom de la classe", hint: "classe"),
+                    ),
+                  );
+                });
+          },
         ),
       ),
     );
