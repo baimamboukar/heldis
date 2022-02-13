@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grouped_list/grouped_list.dart';
 import 'package:heldis/utils/utils.dart';
 import 'package:line_icons/line_icons.dart';
 
@@ -10,25 +11,20 @@ class Presences extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Presences")),
-      body: SingleChildScrollView(
-        child: Column(children: [
-          const SizedBox(
-            height: 20,
-          ),
-          Text(
-            "Aujourd'hui",
-            style:
-                Styles.designText(color: Palette.dark, size: 16, bold: false),
-          ),
-          ...historic,
-          Text(
-            "12/01/2022",
-            style:
-                Styles.designText(color: Palette.dark, size: 16, bold: false),
-          ),
-          ...historic
-        ]),
-      ),
+      body: GroupedListView(
+          groupSeparatorBuilder: (String group) => Stack(
+                clipBehavior: Clip.none,
+                alignment: Alignment.center,
+                children: [
+                  const Center(child: Divider()),
+                  Center(
+                    child: Chip(label: Text(group)),
+                  )
+                ],
+              ),
+          elements: historic,
+          itemBuilder: (context, PresenceLabel label) => label,
+          groupBy: (PresenceLabel label) => label.date),
     );
   }
 }
@@ -105,6 +101,34 @@ List<PresenceLabel> historic = [
   const PresenceLabel(
     type: "Absence en cours",
     date: "12/01/2022",
+    time: "06h30",
+    message: "Mbas Samuel etait absent au cours de mathematiques a 10H25",
+    danger: true,
+  ),
+  const PresenceLabel(
+    type: "Arivee a l'ecole",
+    date: "12/03/2022",
+    time: "06h30",
+    message: "Mbas Samuel est arrive a l'ecole a 6h30mins",
+    danger: false,
+  ),
+  const PresenceLabel(
+    type: "Absence en cours",
+    date: "12/03/2022",
+    time: "06h30",
+    message: "Mbas Samuel etait absent au cours de mathematiques a 10H25",
+    danger: true,
+  ),
+  const PresenceLabel(
+    type: "Arivee a l'ecole",
+    date: "Aujourd'hui",
+    time: "06h30",
+    message: "Mbas Samuel est arrive a l'ecole a 6h30mins",
+    danger: false,
+  ),
+  const PresenceLabel(
+    type: "Absence en cours",
+    date: "10/01/2022",
     time: "06h30",
     message: "Mbas Samuel etait absent au cours de mathematiques a 10H25",
     danger: true,
