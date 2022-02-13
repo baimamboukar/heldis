@@ -36,44 +36,33 @@ class Home extends StatelessWidget {
       drawer: const AppDrawer(),
       body: SingleChildScrollView(
         child: Column(
+          // ignore: prefer_const_literals_to_create_immutables
           children: <Widget>[
-            Block(
+            const Block(
               title: "Faire l'appel",
               desc:
                   "Faites l'appel a la fin de chaque cour pour connaitre les eleves qui etaitent presents",
-              icon: Icon(LineIcons.users, size: 40, color: Palette.success),
-              nextScreen: const Home(),
+              icon: "assets/icons/grades.png",
+              nextScreen: Home(),
             ),
-            Block(
-              title: "Signaler une indiscipline",
+            const Block(
+              title: " Indiscipline",
               desc:
                   "Si vous avez remarquer un eacrt de comportement d'un eleve, veuillez le renseigner ici",
-              icon: Icon(
-                LineIcons.stopCircle,
-                color: Palette.error,
-                size: 40,
-              ),
-              nextScreen: const Home(),
+              icon: "assets/icons/indiscipline.png",
+              nextScreen: Home(),
             ),
-            Block(
+            const Block(
               title: "Entrez les notes",
               desc: "Entrez la note des eleves a la fin de chaque evaluation",
-              icon: Icon(
-                LineIcons.newspaper,
-                size: 40,
-                color: Palette.primary,
-              ),
-              nextScreen: const Home(),
+              icon: "assets/icons/grades.png",
+              nextScreen: Home(),
             ),
-            Block(
+            const Block(
               title: "Scanner une carte",
               desc: "Scannez la carte d'un eleve pour l'identifier",
-              icon: Icon(
-                Icons.qr_code,
-                color: Palette.dark,
-                size: 40,
-              ),
-              nextScreen: const Home(),
+              icon: "assets/icons/grades.png",
+              nextScreen: Home(),
             ),
             const SizedBox(
               height: 20.0,
