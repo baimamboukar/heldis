@@ -71,7 +71,8 @@ class Heldis extends StatelessWidget {
                     return const SchoolHome();
                   case ClassDetails.routeName:
                     return const ClassDetails();
-
+                  case ScanView.routeName:
+                    return const ScanView();
                   default:
                     return const Home();
                 }
