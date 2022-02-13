@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:heldis/utils/utils.dart';
 
 class Box extends StatelessWidget {
-  final Icon icon;
+  final Widget icon;
   final String title;
   const Box({Key? key, required this.icon, required this.title})
       : super(key: key);
