@@ -49,7 +49,7 @@ packages:
       name: auto_route
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.2.2"
+    version: "3.2.4"
   bloc:
     dependency: transitive
     description:
